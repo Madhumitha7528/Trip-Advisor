@@ -1,0 +1,411 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Noto Sans", sans-serif;
+}
+.tripadvisor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tripadvisor__s0{
+  display: none;
+}
+.tripadvisor__s1{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.tripadvisor__s1 img{
+    width: 188px;
+    height: 60px;
+}
+.tripadvisor__s2{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tripadvisor__s2 p:hover{
+    transition: 1s;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.tripadvisor__s3{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.tripadvisor__s3 p:hover{
+    transition: 1s;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.tripadvisor__s3__signin{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.content__2 h1{
+    display: none;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+#searchall:checked~.content__1 .where{
+    display: block;
+}
+#hotels:checked~.content__1 .stay{
+    display: block;
+}
+#things:checked~.content__1 .fun{
+    display: block;
+}
+#restaurants:checked~.content__1 .eat{
+    display: block;
+}
+#flights:checked~.content__1 .flight{
+    display: block;
+}
+#holiday:checked~.content__1 .rent{
+    display: block;
+}
+.content1{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    width: 75%;
+}
+.content1_toggle{
+    position: relative;
+    cursor: pointer;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    transition: color 0.2s ease-in;
+}
+.content1_toggle .underline{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+#searchall:checked~.content__1 label[for="searchall"] .underline,
+#hotels:checked~.content__1 label[for="hotels"] .underline,
+#things:checked~.content__1 label[for="things"] .underline,
+#restaurants:checked~.content__1 label[for="restaurants"] .underline,
+#flights:checked~.content__1 label[for="flights"] .underline,
+#holiday:checked~.content__1 label[for="holiday"] .underline {
+    width: 100%;
+}
+.search-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 20px; 
+}
+.search-bar{
+  display: flex;
+  align-items: center;
+  width: 600px; 
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 10px 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.search-bar input{
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+}
+.search-bar button{
+  background-color: #2ee59d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.booktrip{
+    width: 80%;
+    display: flex;
+    height: 410px;
+    background-color: #ff5d5d;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    text-align: start;
+    margin-top: 50px;
+    margin-left: 135px;
+}
+.booktrip__s1{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    flex-grow: 2;
+    position: relative;
+    flex-grow: 2;
+}
+.booktrip__s1__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    flex-grow: 2;
+    position: relative;
+    flex-grow: 2;
+}
+.booktrip__content{
+    padding: 20px;
+}
+.booktrip__content h1{
+    font-size: 70px;
+    line-height: 1;
+    flex-grow: 1;
+}
+.booktrip__content h5{
+    font-size: 20px;
+    margin-top: 30px;
+}
+.booktrip__content button{
+    padding: 10px;
+    width: fit-content;
+    background-color: #000000;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: all 0.2s ease-in;
+}
+.booktrip__content button:hover{
+    background-color: #2d2d2d;
+    transition: all 0.2s ease-in;
+}
+.interests h2{
+  font-size: 28px;
+  margin-bottom: 8px;
+  margin-top: 50px;
+  margin-left: 135px;
+}
+.interests p{
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 24px;
+  margin-top: 20px;
+  margin-left: 135px;
+}
+.cards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: 135px;
+}
+.card{
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  height: 280px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.card span{
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  width: 100%;
+}
+.experience-section h2{
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-top: 50px;
+  margin-left: 135px;
+}
+.experience-section p{
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  margin-left: 135px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 135px;
+}
+.experience-card{
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #fff;
+  transition: transform 0.3s;
+}
+.experience-card:hover{
+  transform: translateY(-5px);
+}
+.experience-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-content{
+  padding: 15px;
+}
+.card-content h3{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+.stars{
+  color: #00aa6c;
+}
+.price{
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+.ad{
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+}
+.footer{
+  background-color: #f2f2f2;
+  padding: 40px;
+  color: #000;
+  font-size: 14px;
+  margin-top: 50px;
+}
+.footer-top{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.footer-column{
+  flex: 1 1 200px;
+}
+.footer-column h4{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer-column ul{
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li{
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.footer-column a{
+  color: #000;
+  text-decoration: underline;
+}
+.footer-bottom{
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+.footer-logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.footer-logo img{
+  height: 30px;
+}
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.footer-links a{
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.selectors-icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.selectors select{
+  padding: 6px 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.social-icons i{
+  font-size: 18px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.footer-disclaimer{
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.read-more{
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+@media screen and (max-width: 546px) {
+    body {
+        height: 50vh;
+    }
+    .tripadvisor__s0{
+      display: block;
+    }
+    .tripadvisor__s1{
+      display: none;
+    }
+}
