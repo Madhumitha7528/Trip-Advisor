@@ -4,6 +4,7 @@ A simple responsive clone of the TripAdvisor website built using HTML and CSS. T
 
 ## 📸 Demo
 
+https://madhumitha7528.github.io/Trip-Advisor/
 
 
 ## 🚀 Features
